@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for altercar module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
+use Drupal\file;
+use Drupal\file\FileInterface;
+//use Drupal\file\Entity\File;
+//use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\filter\Entity\FilterFormat;
+
+
+
+function dimmastro_node_view(array &$build, NodeInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+
+  if ($view_mode != 'rss') {
+
+    // Add content that should NOT be displayed in the RSS feed.
+    $build['extra_non_feed_content'] = array(
+      '#markup' => '<p>' . t('Extra data that should appear everywhere except the RSS feed for node @nid.', array(
+        '@nid' => $node
+          ->id(),
+      )) . '</p>',
+    );
+/*
+    $build['extra_non_feed_content2'] = array(
+      '#markup' => '<p>' . t('Title @title.', array(
+        '@title' => $node->get('field_geoline_txt')->value,
+      )) . '</p>',
+    );
+*/
+//dsm($node->get("field_geoline_txt"));
+//$node->set("field_geoline_txt", "123");
+  }
+}
+

@@ -1,0 +1,7 @@
+altercar.content:
+  path: '/altercar'
+  defaults:
+    _controller: '\Drupal\altercar\Controller\AltercarController::content'
+    _title: 'Altercar'
+  requirements:
+    _permission: 'access content'

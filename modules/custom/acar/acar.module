@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for acar module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
+use Drupal\file;
+use Drupal\file\FileInterface;
+//use Drupal\file\Entity\File;
+//use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\filter\Entity\FilterFormat;
+
+

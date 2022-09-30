@@ -1,0 +1,7 @@
+acar.content:
+  path: '/acar'
+  defaults:
+    _controller: '\Drupal\acar\Controller\AcarController::content'
+    _title: 'Acar'
+  requirements:
+    _permission: 'access content'
